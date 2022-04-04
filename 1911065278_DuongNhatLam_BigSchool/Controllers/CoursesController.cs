@@ -21,13 +21,14 @@ namespace _1911065278_DuongNhatLam_BigSchool.Controllers
         // GET: Courses
         [Authorize]
         [HttpPost]
-        public ActionResult Create(CourseViewModel viewModel)
+        public ActionResult Create(CourseViewModel  viewModel)
         {
-            if (!ModelState.IsValid)
-            {
-                viewModel.Categories = _dbContext.Categories.ToList();
-                return View("Create", viewModel);
-            }
+            //if (!ModelState.IsValid)
+            //{
+            //    viewModel.Categories = _dbContext.Categories.ToList();
+            //    return View("Create", viewModel);
+            //}
+            //commit
             var course = new Course
             {
                 LecturerId = User.Identity.GetUserId(),
